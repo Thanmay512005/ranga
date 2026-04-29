@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/Thanmay512005/ranga.git'
-            }
-        }
-
         stage('Build Image') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
